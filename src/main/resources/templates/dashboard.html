@@ -9,6 +9,9 @@
 <h1>Dashboard</h1>
 <p>Bienvenido, <span sec:authentication="name"></span></p>
 
+<!-- th:text escapa automáticamente cualquier HTML o script -->
+<p>Nombre: <span th:text="${usuario}"></span></p>
+
 <!-- Solo visible para ADMIN -->
 <a sec:authorize="hasRole('ADMIN')" th:href="@{/admin}">
     Panel de Administración
