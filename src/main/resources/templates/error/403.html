@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso Denegado</title>
+</head>
+<body>
+<h1> Acceso Denegado (403)</h1>
+<p>El usuario <strong sec:authentication="name"></strong>
+    no tiene permisos para acceder a este recurso.</p>
+<a th:href="@{/dashboard}">Volver al Dashboard</a>
+</body>
+</html>
